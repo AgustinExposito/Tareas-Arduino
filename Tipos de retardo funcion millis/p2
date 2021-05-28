@@ -1,0 +1,17 @@
+//https://www.tinkercad.com/things/9WVfYO7ZFkL-tremendous-snicket/editel?sharecode=ZR9wAAAGLrC1WXpdq3WlUKxBZ1emZ1uq_Bw3IlefSVw
+
+long int timer=2000;
+unsigned long tiempo1 = 0;
+unsigned long tiempo2 = 0;
+
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop(){
+  tiempo1 = millis();
+  if((tiempo1 - tiempo2) > timer){
+    tiempo2 = tiempo1;
+    Serial.println("Timer Activado");
+  }
+}
