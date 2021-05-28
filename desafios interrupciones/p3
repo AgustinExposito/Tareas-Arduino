@@ -1,4 +1,4 @@
-String aa;
+
 void setup()
 {
   Serial.begin(9600);
@@ -10,11 +10,8 @@ void loop()
   delay(1000);
 }
 void serialEvent(){
-  if(Serial.available()<0){
-   aa = Serial.readString();
-    Serial.println(aa);
-    if(aa=="hola"){
+String aa = Serial.readString();
+  if(aa=="hola"){
       Serial.println("full picado pa");
-    }
   }
 }
