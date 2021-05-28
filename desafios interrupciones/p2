@@ -1,4 +1,4 @@
-String bruh;
+
 void setup()
 {
   Serial.begin(9600);
@@ -6,13 +6,9 @@ void setup()
 
 void loop()
 {
-  
 }
 void serialEvent(){
-  if(Serial.available()>0){
-   char a=Serial.read();
-       bruh=a;
-      Serial.println(bruh.length());
- 
-  }
+String aa = Serial.readString();
+      Serial.println(aa.length());
+  
 }
